@@ -221,17 +221,6 @@ class Image {
         break;
     }
   }
-  public function translateXY($x, $y, $width, $height) {
-    $newX = $x;
-    $newY = $y;
-    if($x < 0) {
-      $newX = ($x/$width) * $this->width;
-    }
-    if($y < 0) {
-      $newY = ($y/$height) * $this->height;
-    }
-    return array('x' => $x, 'y' => $y);
-  }
   private function dimensions($width, $height, $minWidth = 'auto', $minHeight = 'auto') {
     if($width == $minWidth && $height == $minHeight)
         return array('width' => $width, 'height' => $height);
